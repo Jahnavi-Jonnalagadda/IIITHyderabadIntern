@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<head>
+<title>Marksheet</title>
+</head>
+
+<style>
+	table {outline-color: yellow;}
+
+	table.groove{
+		outline-style: groove;
+		outline-width: 4px;
+	}
+
+	#overall{
+		color: blue ;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	#good{
+		background-color: #cce5ff;
+	}
+
+	.center {
+  		padding-left: 100px;
+  		color: brown;
+  	}
+
+  	.alignright{
+  		text-align: right;
+  	}
+
+  	.alignleft{
+  		text-align: left;
+  	}
+  	tr:nth-child(even) {background-color: #e8daef;}
+</style>
+
+<body>
+
+<h2 class="center">Marksheet</h2>
+
+<table class="groove">
+	<tr>
+		<th>S.NO</th>
+		<th>SUBJECT</th>
+		<th>CREDITS</th>
+		<th>MARKS</th>
+		<th>GRADE</th>
+	</tr>
+	<tr>
+		<td>1.</td>
+		<td class="alignleft">Basic Electronics</td>
+		<td class="alignright">2</td>
+		<td class="alignright">66</td>
+		<td class="alignright">A+</td>
+	</tr>
+	<tr>
+		<td>2.</td>
+		<td class="alignleft">Computer Architechture and Microprocessor</td>
+		<td class="alignright">3</td>
+		<td class="alignright">73</td>
+		<td  class="alignright" id="good">O</td>
+	</tr>
+	<tr>
+		<td>3.</td>
+		<td class="alignleft">Database Management Systems</td>
+		<td class="alignright">3</td>
+		<td class="alignright">75</td>
+		<td class="alignright" id="good">O</td>
+	</tr>
+	<tr>
+		<td>4.</td>
+		<td class="alignleft">Indian Constitution</td>
+		<td class="alignright">1</td>
+		<td class="alignright">69</td>
+		<td class="alignright">A++</td>
+	</tr>
+	<tr>
+		<td>5.</td>
+		<td class="alignleft">Probability and Statistics</td>
+		<td class="alignright">2</td>
+		<td class="alignright">68</td>
+		<td class="alignright">A++</td>
+	</tr>
+	<tr>
+		<td>6.</td>
+		<td class="alignleft">Basic Electronics Lab</td>
+		<td class="alignright">2</td>
+		<td class="alignright">20</td>
+		<td class="alignright">A+</td>
+	</tr>
+	<tr>
+		<td>7.</td>
+		<td class="alignleft">DBMS Lab</td>
+		<td class="alignright">2</td>
+		<td class="alignright">25</td>
+		<td class="alignright" id="good">O</td>
+	</tr>
+	<tr>
+		<td>8.</td>
+		<td class="alignleft">Computer Architechture Lab</td>
+		<td class="alignright">2</td>
+		<td class="alignright">25</td>
+		<td  class="alignright" id="good">O</td>
+	</tr>
+
+	<tr id="overall">
+		<td></td>
+		<td>TOTAL:</td>
+		<td class="alignright">17</td>
+		<td class="alignright" id="total"></td>
+		<td class="alignright" id="good">O</td>
+	</tr>
+
+	<!-- Finding total using OPERATORS
+	<script>
+		var total = 66 + 73 + 75 + 69 + 68 + 20 + 25 + 25;
+
+		document.getElementById("total").innerHTML = total;
+	</script> -->
+
+
+	<!-- Finding average from total using FUNCTION -->
+	<script>
+		var total = totalFunc();
+		document.getElementById("total").innerHTML = total;
+
+		function totalFunc(){
+			return 66 + 73 + 75 + 69 + 68 + 20 + 25 + 25;
+		}
+	</script>
+
+	<tr id="overall">
+		<td></td>
+		<td>AVERAGE:</td>
+		<td></td>
+		<td></td>
+		<td class="alignright" id="avg"></td>
+	</tr>
+
+	<!-- Finding average from total using OPERATORS
+	<script>
+		var avg = total/8;
+
+		document.getElementById("avg").innerHTML = avg;
+	</script> -->
+
+
+	<!-- Finding average from total using FUNCTION -->
+	<script>
+
+		var avg = avgFunc(total);
+		document.getElementById("avg").innerHTML = avg
+
+		function avgFunc(total){
+			return total/8;
+		}
+
+	</script>
+</table>
+
+</body>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+	/* Setting the content in the form of a box */
+	.myDiv{
+		border: 2px solid green;
+		width: 550px;
+		padding-top:1em;
+		padding-right:1em;
+		padding-bottom:1em;
+		padding-left:1em;
+	}
+
+	/* Setting margins to the page */
+	.mDiv{
+		margin-left: 50px;
+	}
+
+	/* Setting image to the top */
+	img{
+		float: right;
+		margin-top: 50px;
+		margin-bottom: 500px;
+		margin-right: 100px;
+		margin-left: 100px;
+	}
+
+	/* Setting image at the bottom with positioning by calling img ID */
+	#img{
+		float:right;
+		margin-top: 500px;
+		margin-bottom: 50px;
+		margin-right: 100px;
+		margin-left: 100px;
+	}
+
+	/* Styling the button */
+	.button {
+		display: inline-block;
+		padding: 15px 25px;
+		font-size: 14px;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		outline: none;
+		color: #fff;
+		background-color: #d7bde2;
+		border: none;
+		border-radius: 15px;
+	}
+
+	/* Changing font size and color */
+	#pfont{
+		font-size: 20px;
+		color: navy;
+	}
+
+</style>
+
+<body id="bcolor" class="mDiv">
+	<!-- Give background color to the page -->
+	<script>
+		document.getElementById("bcolor").style.backgroundColor = "#d0d3d4";
+	</script>
+
+	<!-- Heading along with setting color and font-size -->
+	<h1 style="color: navy; font-size: 50px">Hi There!</h1>
+
+	<!-- Heading along with setting font-size -->
+	<h2 style="font-size: 25px">Would you like to get started with JavaScript?</h2>
+
+	<!-- Setting image at the top. Used a class above for positioning -->
+	<img src="C:\Users\jahna\IIIT_Intern\Javascript\jsFirst.png" style="position:absolute;top:0;right:0;width:350px;height:180px;">
+
+	<div class="myDiv">
+
+		<!-- Setting margins -->
+		<h3>Why learn JavaScript?</h3>
+
+		<!-- Setting font family to the content below -->
+		<p id="font">Each year, new trends and technologies shape the environment that web developers find themselves in. The world of web development continues to evolve and move at a fast pace. JavaScript is one of the flexible programming language which could help you skill up these technologies. It enables web applications, game development, mobile apps and many more.</p>
+
+		<!-- JS code to set font family -->
+		<script>
+			document.getElementById("font").style.fontFamily = "Trebuchet MS, sans-serif";
+		</script>
+
+	</div>
+
+	</script>
+
+	<br>
+
+	<!-- Changing font size and color, using onclick to navigate to a new page via pop-up -->
+	<p id="pfont"><b>Know more about JavaScript here </b><button class="button" onclick="myFunction()"><a href="file:///C:/Users/jahna/IIIT_Intern/Javascript/jsdocument.html" style="text-decoration:none"><b>Getting Started</b></button></p>
+	
+	<!-- Text inside the pop-up -->
+	<script>
+		function myFunction() {
+		  alert("Let's have fun with JavaScript!")
+		}
+	</script>
+
+	<!-- Setting image at the bottom with positioning by calling img ID -->
+	<img id="img" src="C:\Users\jahna\IIIT_Intern\Javascript\jsSecond.png" style="position:absolute;right:0;bottom:0;width:350px;height:180px;">
+
+</body>
+
+</html>

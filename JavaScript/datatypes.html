@@ -1,0 +1,26 @@
+<!-- Become familiar with data types -->
+<html>
+
+<body>
+	<p id="ndatatype"></p>
+
+	<p id="sdatatype"></p>
+
+<script>
+	var arr = [1, 2, 3, 4, 5];
+	var element = arr[3];
+
+	// Datatype: Number
+	document.getElementById("ndatatype").innerHTML = "Value before type casting: " + element + " " + typeof element;
+
+	// Type casting to string
+	element = String(element);
+
+	// Datatype: String
+	document.getElementById("sdatatype").innerHTML = "Value after type casting: " + element + " " + typeof element;
+
+</script>
+
+</body>
+
+</html>

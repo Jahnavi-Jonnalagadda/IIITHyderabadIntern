@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+	<p id="pow"></p>
+	<p id="sqrt"></p>
+	<p id="abs"></p>
+	<p id="rand"></p>
+
+
+	<script>
+		// Power Function - Math.pow()
+		document.getElementById("pow").innerHTML = "2 power 4: " + Math.pow(2,4);
+
+		// Square root function - Math.sqrt()
+		document.getElementById("sqrt").innerHTML = "Square root of 36: " + Math.sqrt(36);
+
+		// Absolute value - Math.abs()
+		document.getElementById("abs").innerHTML = "Absolute value of -56.7: " + Math.abs(-56.7);
+
+		// Random number - Math.random()
+		var val = Math.random();
+		document.getElementById("rand").innerHTML = "Random value: " + val;
+
+		// Floor function - Math.floor()
+		document.getElementById("floor").innerHTML = "Floor of the random value: " + Math.floor(val);
+
+		// Ceil function - Math.ceil()
+		document.getElementById("ceil").innerHTML = "Ceil of the random value: " + Math.ceil(val);
+
+		//
+	</script>
+
+</body>
+
+</html>
