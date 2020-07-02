@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<style>
+
+		/* Setting the body of the page */
+		#setBody{
+			width: 700px;
+			border: 2px white;
+			background-color: pink;
+			padding-top: 15px;
+		}
+
+		/* Setting background color for heading */
+		#hColor{
+			/*background-color: #34495e; */
+			margin-top: 50px;
+			color: white;
+		}
+
+		/* Setting background color for body */
+		#bColor{
+			background-color: #34495e;
+			margin-left: 100px;
+			margin-right: 100px;
+		}
+
+		/* Setting the margin */
+		#heading{
+			padding: center;
+		}
+
+		/* Setting a common margin to the left */
+		.comMargin{
+			margin-left: 70px;
+
+		/* Date button */
+		}
+		.date{
+			font-size: 20px;
+			color: navy;
+		}
+
+		/* Styling the "Check this out" */
+		#welcome{
+			margin-top: 40px;
+			margin-left: 70px;
+			font-size: 20px;
+			color: navy;
+		}
+
+		/* Welcome button */
+		.welcome{
+			
+			padding-left: 70px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+
+		/* Setting the scroll funtion */
+		#scroll{
+			border: 2px solid black;
+			width: 300px;
+			height: 100px;
+			padding-left: 15px;
+			padding-top: 15px;
+			overflow: scroll;
+			background-color: #e8daef;
+		}
+
+		/* Setting the wheel function */
+		#wheel{
+			border: 2px solid black;
+			width: 200px;
+			background-color: #e8daef;
+			padding-left: 15px;
+			padding-top: 15px;
+			padding-right: 15px;
+			margin-bottom: 200px;
+		}
+
+	</style>
+
+	<script>
+
+		function myFunction() {
+  			alert("Welcome!");
+		}
+
+		function myEvent(){
+			alert("Hi There! Let's explore the different events in JavaScript.");
+		}
+
+		function Hello() {
+            alert("Hello World!")
+        }
+
+	</script>
+
+<body id="bColor" onpageshow="myFunction()">
+	
+	<center>
+		<div id="hColor">
+			<h1 style="color: white" id="heading">Explore Events in JavaScript</h1>
+			<br>
+		</div>
+	</center>
+
+	<center>
+	<div id="setBody">
+		<p id="date"></p>
+
+		<p id="welcome"><b>Check This Out!</b></p>  
+
+		<!-- Welcome button -->
+		<form class="welcome">
+			<input type="button" size="50" onclick = "myEvent()" value="Welcome!">
+		</form>
+
+		<!-- Time button -->
+		<center><button class="date" onclick="document.getElementById('date').innerHTML=Date()">Time Please?</button></center>
+
+		<h3 class="comMargin" style= "color:navy">Scroll this down</h3>
+
+		<!-- Scroll function -->
+		<div class="comMargin" id="scroll" onscroll="scrollFunction()">It is important to understand that the different contexts in which JavaScript is used have different event models — from Web APIs to other areas such as browser WebExtensions and Node.js (server-side JavaScript).
+		</div>
+
+		<!-- Set left margin to the scroll part -->
+		<p style="color: navy" class="comMargin">You scrolled <span id="fScroll">0</span> times.</p>
+
+		<!-- Scroll function -->
+		<script>
+			var x = 0;
+			function scrollFunction() {
+			  document.getElementById("fScroll").innerHTML = x += 1;
+			}
+		</script>
+
+		<!-- Wheel function -->
+		<center>
+			<div id="wheel">
+				<p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+			</div>
+		</center>
+
+		<!-- Wheel function -->
+		<script>
+			document.getElementById("wheel").addEventListener("wheel", wheelFunction);
+
+			function wheelFunction() {
+			  this.style.fontSize = "35px";
+			}
+		</script>
+		<br>
+</div>
+</center>
+	
+</body>
+
+</html>

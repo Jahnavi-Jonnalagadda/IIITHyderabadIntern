@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<p id="num"></p>
+<script>
+
+	// Use of switch and if-else statements
+	var num = "2";
+	
+	// Demonstrating Try, Catch, Throw and Finally
+	try{
+		if(typeof num == "number"){
+			switch (num>10 && num<100) {
+				case true: alert("In the given range.")
+				break;
+				case false: throw "Not in the given range."
+				break;
+			}
+		}
+		else{
+			throw "Not a number";
+		} 
+	}
+	catch(e){
+		
+		console.log("Not a valid number");
+	}
+	finally{
+		document.write("Try, Catch, Throw and Finally.")
+	}
+
+	document.write("<br><br>");
+
+	
+
+	// Fibonacci Series
+	var n1 = 0, n2 = 1, n3;
+
+	document.write("First 8 values of Fibonacci Series: ");
+	while(n1<20)
+	{
+	document.write(n1 + " ");
+	n3 = n1+n2;
+	n1 = n2;
+	n2 = n3;
+	}
+		
+		
+</script>
+
+</html>
